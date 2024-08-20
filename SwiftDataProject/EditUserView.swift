@@ -15,7 +15,7 @@ struct EditUserView: View {
         Form {
             TextField("Name", text: $user.name)
             TextField("city", text: $user.city)
-            DatePicker("Date", selection: $user.joindate)
+            DatePicker("Date", selection: $user.joinDate)
         }
         .navigationTitle("EditUser")
         .navigationBarTitleDisplayMode(.inline)
@@ -26,7 +26,7 @@ struct EditUserView: View {
     do {
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: User.self, configurations: config)
-        let user = User(name: "Connor", city: "Burnaby", joindate: .now)
+        let user = User(name: "Connor", city: "Burnaby", joinDate: .now)
         
         return EditUserView(user: user)
             .modelContainer(container)

@@ -12,11 +12,11 @@ import SwiftData
 class User {
     var name: String
     var city: String
-    var joindate: Date
+    var joinDate: Date
     
-    init(name: String, city: String, joindate: Date) {
+    init(name: String, city: String, joinDate: Date) {
         self.name = name
         self.city = city
-        self.joindate = joindate
+        self.joinDate = joinDate
     }
 }
