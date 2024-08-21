@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183ADDE62C76783100779E02 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 183ADDE52C76783100779E02 /* FirebaseStorage */; };
 		18D0876C2C6EC0AC003D9238 /* SwiftDataProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0876B2C6EC0AC003D9238 /* SwiftDataProjectApp.swift */; };
 		18D0876E2C6EC0AC003D9238 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0876D2C6EC0AC003D9238 /* ContentView.swift */; };
 		18D087702C6EC0AE003D9238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D0876F2C6EC0AE003D9238 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 		18D0877A2C6EC59F003D9238 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D087792C6EC59F003D9238 /* User.swift */; };
 		18D0877C2C6EC683003D9238 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0877B2C6EC683003D9238 /* EditUserView.swift */; };
 		18D0877E2C7532C0003D9238 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0877D2C7532C0003D9238 /* UserView.swift */; };
+		18D087802C7660D9003D9238 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0877F2C7660D9003D9238 /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,9 @@
 		18D087792C6EC59F003D9238 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		18D0877B2C6EC683003D9238 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		18D0877D2C7532C0003D9238 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		18D0877F2C7660D9003D9238 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		18D087812C766D80003D9238 /* SwiftDataProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDataProject.entitlements; sourceTree = "<group>"; };
+		18D087822C7671C9003D9238 /* SwiftDataProjectRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDataProjectRelease.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183ADDE62C76783100779E02 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +63,12 @@
 		18D0876A2C6EC0AC003D9238 /* SwiftDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				18D087822C7671C9003D9238 /* SwiftDataProjectRelease.entitlements */,
+				18D087812C766D80003D9238 /* SwiftDataProject.entitlements */,
 				18D0876B2C6EC0AC003D9238 /* SwiftDataProjectApp.swift */,
 				18D0876D2C6EC0AC003D9238 /* ContentView.swift */,
 				18D0877D2C7532C0003D9238 /* UserView.swift */,
+				18D0877F2C7660D9003D9238 /* Job.swift */,
 				18D0877B2C6EC683003D9238 /* EditUserView.swift */,
 				18D087792C6EC59F003D9238 /* User.swift */,
 				18D0876F2C6EC0AE003D9238 /* Assets.xcassets */,
@@ -92,6 +101,9 @@
 			dependencies = (
 			);
 			name = SwiftDataProject;
+			packageProductDependencies = (
+				183ADDE52C76783100779E02 /* FirebaseStorage */,
+			);
 			productName = SwiftDataProject;
 			productReference = 18D087682C6EC0AC003D9238 /* SwiftDataProject.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +132,9 @@
 				Base,
 			);
 			mainGroup = 18D0875F2C6EC0AC003D9238;
+			packageReferences = (
+				183ADDE42C76783100779E02 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 18D087692C6EC0AC003D9238 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D0876E2C6EC0AC003D9238 /* ContentView.swift in Sources */,
+				18D087802C7660D9003D9238 /* Job.swift in Sources */,
 				18D0877C2C6EC683003D9238 /* EditUserView.swift in Sources */,
 				18D0877E2C7532C0003D9238 /* UserView.swift in Sources */,
 				18D0876C2C6EC0AC003D9238 /* SwiftDataProjectApp.swift in Sources */,
@@ -281,6 +297,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftDataProject/SwiftDataProject.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataProject/Preview Content\"";
@@ -299,6 +317,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ConnorNguyen.SwiftDataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,6 +329,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftDataProject/SwiftDataProjectRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataProject/Preview Content\"";
@@ -328,6 +349,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ConnorNguyen.SwiftDataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		183ADDE42C76783100779E02 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		183ADDE52C76783100779E02 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 183ADDE42C76783100779E02 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18D087602C6EC0AC003D9238 /* Project object */;
 }
